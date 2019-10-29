@@ -1,0 +1,83 @@
+---
+title: "Data Wrangling with dplyr"
+output: 
+    html_document:
+        toc: TRUE
+        toc_float: TRUE
+---
+
+This blog provides an introduction to data wrangling with dplyr.
+
+
+# Part I - Introduction 
+
+In data analysis, it is often necessary to clean, organize and transform the original data set. The common data collation and transformation work mainly includes the selection of specific analysis variables, the screening of data records meeting the conditions, sorting by one or several variables, processing the original variables and generating new variables, summarizing the data and grouping them, such as calculating the average value of each group.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(cache=TRUE, error=FALSE, message=FALSE, warning=FALSE, tidy.opts=list(width.cutoff=60),tidy=TRUE)
+```
+
+## Package - dplyr
+
+The package will be used to do data wrangling in this blog is [dplyr](https://dplyr.tidyverse.org/)
+
+The dplyr package is the masterwork of [Hadley Wickham](http://hadley.nz/)(author of the ggplot2 package, known as "a person who changes R") and calls himself a grammar of data manipulation. He further separated and strengthened functions such as ddply() in the original plyr package, and focused on accepting dataframe objects, which greatly increased the speed and provided a more robust interface with other database objects.
+
+### dplyr overview
+
+dplyr is a grammar of data manipulation, providing a consistent set of verbs that help users solve the most common data manipulation challenges.
+
+Here are some of the basic functions commonly used in the dplyr package:
+
+[mutate()](https://dplyr.tidyverse.org/reference/mutate.html) adds new variables that are functions of existing variables.
+
+[select()](https://dplyr.tidyverse.org/reference/select.html) picks variables based on their names.
+
+[filter()](https://dplyr.tidyverse.org/reference/filter.html) picks cases based on their values.
+
+[summarise()](https://dplyr.tidyverse.org/reference/summarise.html) reduces multiple values down to a single summary.
+
+[arrange()](https://dplyr.tidyverse.org/reference/arrange.html) changes the ordering of the rows.
+
+### Installation
+
+```{r}
+install.packages("dplyr",repos = "http://cran.us.r-project.org")
+library(dplyr)
+```
+
+### Example Data
+
+To demonstrate the following functions,We will use the presidential dataframe for this blog.
+
+The presidential dataframe has p=4 variables about n=11 recent presidents.
+
+```{r}
+# Load Example Data
+library(mdsr)
+presidential
+```
+
+
+# Part II - Functions
+
+The five main verbs (or functions) for working with data are as follows.
+
+Each function takes a dataframe as its first argument and returns a dataframe.
+
+## Mutate
+
+mutate() is used to add new variables and preserve existing ones from a dataset.
+
+
+## Select 
+
+select() is used to take a subset of the columns from a dataset.
+
+
+## Filter
+
+
+## Summarise
+
+## Arrange

@@ -1,0 +1,12 @@
+---
+output: 
+  html_document:
+    theme: paper
+---
+
+
+<img src="https://thumbs.gfycat.com/JointFluidLamprey-size_restricted.gif" style="width:25%; border:10px solid; margin-right: 20px" align="left">
+
+Sometimes you need to say a bit about the site -- how it was made, where it's hosted, where the source code can be found. 
+
+If this is for a project or analysis, I recommend giving some details about the R package versions that you used to create the content.
